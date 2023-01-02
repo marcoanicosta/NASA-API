@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js version ${martix.node-version}
+      - name: Use Node.js version ${{martix.node-versio}}
         uses: actions/setup-node@v3
         with:
-          node-version: ${martix.node-version}
+          node-version: ${{martix.node-version}}
       - run: npm install
       - run: npm run build --prefix client
       - run: npm test

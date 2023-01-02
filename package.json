@@ -5,21 +5,17 @@
   "main": "index.js",
   "scripts": {
     "install-server": "npm install --prefix server",
-    "install-client": "npm install --prefix server",
-    "install": "npm install --prefix client && npm install --prefix server",
+    "install-client": "npm install --prefix client",
+    "install": "npm run install --prefix sever && npm run install --prefix client",
     "server": "npm run watch --prefix server",
     "client": "npm start --prefix client",
     "watch": "npm run server & npm run client",
     "deploy": "npm run build --prefix client && npm start --prefix server",
     "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server",
-    "test": "npm run test --prefix server && npm run test --prefix client"
+    "test": "npm test --prefix server && npm test --prefix client"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "axios": "^1.2.1",
-    "morgan": "^1.10.0",
-    "react-scripts": "5.0.0",
-  }
+  "dependencies": {}
 }
